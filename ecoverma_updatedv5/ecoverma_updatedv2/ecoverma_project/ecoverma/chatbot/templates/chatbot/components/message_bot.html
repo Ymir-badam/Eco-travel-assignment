@@ -1,0 +1,43 @@
+
+<div class="message bot-message">
+
+    <div class="message-avatar">
+        🌿
+    </div>
+
+    <div class="message-content">
+
+        <div class="message-name">
+            EcoTravel AI
+        </div>
+
+        <div class="message-bubble">
+
+            {{ message|linebreaksbr }}
+
+            {% if buttons %}
+
+                <div class="response-buttons">
+
+                    {% for button in buttons %}
+
+                        <button
+                            class="response-button"
+                            onclick="sendQuickMessage('{{ button.title|escapejs }}')">
+
+                            {{ button.title }}
+
+                        </button>
+
+                    {% endfor %}
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+

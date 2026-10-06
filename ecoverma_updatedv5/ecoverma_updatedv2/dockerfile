@@ -1,0 +1,37 @@
+
+FROM python:3.10-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    HOME=/home/app \
+    MPLCONFIGDIR=/tmp/matplotlib
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN useradd -m -u 1000 app
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY --chown=app:app ecoverma/ ./ecoverma/
+COPY --chown=app:app entrypoint.sh ./entrypoint.sh
+# Strip Windows (CRLF) line endings so the shell script runs on Linux.
+RUN sed -i 's/\r$//' entrypoint.sh \
+    && chmod +x entrypoint.sh && mkdir -p /app/data && chown -R app:app /app
+
+USER app
+WORKDIR /app/ecoverma
+
+# Collect static files at build time. The key is a throwaway used only for this
+# step; the real DJANGO_SECRET_KEY is supplied at run time.
+RUN DJANGO_SECRET_KEY=build-time-only python manage.py collectstatic --noinput
+
+ENV DJANGO_DB_PATH=/app/data/db.sqlite3 \
+    PORT=7860
+EXPOSE 7860
+
+ENTRYPOINT ["/app/entrypoint.sh"]

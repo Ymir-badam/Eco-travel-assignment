@@ -1,0 +1,229 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thank
+  - start_trip_planning
+  - inform_destination
+  - inform_dates
+  - inform_budget
+  - inform_sustainability_level
+  - ask_hotels
+  - ask_transport
+  - ask_attractions
+  - ask_weather
+  - ask_carbon_footprint
+  - ask_place_description
+  - request_human_handover
+
+entities:
+  - destination
+  - budget
+  - currency
+  - sustainability_level
+  - dates
+  - place_name
+  - distance_km
+
+slots:
+  destination:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: destination
+      - type: from_text
+        conditions:
+          - active_loop: trip_intake_form
+            requested_slot: destination
+
+  destination_lat:
+    type: float
+    mappings:
+      - type: custom
+
+  destination_lon:
+    type: float
+    mappings:
+      - type: custom
+
+  destination_display_name:
+    type: text
+    mappings:
+      - type: custom
+
+  travel_dates:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: trip_intake_form
+            requested_slot: travel_dates
+
+  budget:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: budget
+
+  budget_currency:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: currency
+      - type: from_text
+        conditions:
+          - active_loop: trip_intake_form
+            requested_slot: budget_currency
+
+  destination_currency:
+    type: text
+    mappings:
+      - type: custom
+
+  sustainability_level:
+    type: categorical
+    values:
+      - low
+      - medium
+      - high
+    mappings:
+      - type: from_entity
+        entity: sustainability_level
+
+  distance_km:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: distance_km
+      - type: from_text
+        conditions:
+          - active_loop: null
+
+  place_to_describe:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: place_name
+
+  hotels:
+    type: list
+    mappings:
+      - type: custom
+
+  transport_stops:
+    type: list
+    mappings:
+      - type: custom
+
+  attractions:
+    type: list
+    mappings:
+      - type: custom
+
+  weather_summary:
+    type: text
+    mappings:
+      - type: custom
+
+  carbon_comparison:
+    type: list
+    mappings:
+      - type: custom
+
+  best_transport_mode:
+    type: text
+    mappings:
+      - type: custom
+
+  candidate_options:
+    type: list
+    mappings:
+      - type: custom
+
+  ranked_options:
+    type: list
+    mappings:
+      - type: custom
+
+  handover_package:
+    type: any
+    mappings:
+      - type: custom
+
+  handed_over:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+  fallback_count:
+    type: float
+    mappings:
+      - type: custom
+
+forms:
+  trip_intake_form:
+    required_slots:
+      - destination
+      - travel_dates
+      - budget
+      - budget_currency
+      - sustainability_level
+
+actions:
+  - action_geocode_place
+  - action_find_hotels
+  - action_find_transport
+  - action_find_attractions
+  - action_describe_place
+  - action_weather_forecast
+  - action_convert_currency
+  - action_estimate_carbon
+  - action_rank_options
+  - action_human_handover
+  - action_escalate_after_fallback
+  - action_default_fallback
+  - action_trip_intake_submit
+
+responses:
+  utter_greet:
+    - text: >-
+        Hi, I'm the Eco-Travel Advisor. I can help you plan a lower-carbon
+        trip - sustainable accommodation, low-carbon transport, cultural
+        experiences, and a rough carbon footprint for getting there. Where
+        would you like to go?
+
+  utter_goodbye:
+    - text: "Safe and sustainable travels!"
+
+  utter_ask_destination:
+    - text: "Where would you like to travel to?"
+
+  utter_ask_travel_dates:
+    - text: "What dates are you thinking of travelling (roughly is fine)?"
+
+  utter_ask_budget:
+    - text: "What's your budget for this trip?"
+
+  utter_ask_budget_currency:
+    - text: "Which currency is that in (e.g. GBP, USD, EUR)?"
+
+  utter_ask_sustainability_level:
+    - text: "How important is minimising your environmental impact for this trip?"
+      buttons:
+        - title: "Just the essentials"
+          payload: '/inform_sustainability_level{{"sustainability_level": "low"}}'
+        - title: "Balanced with cost/comfort"
+          payload: '/inform_sustainability_level{{"sustainability_level": "medium"}}'
+        - title: "Sustainability comes first"
+          payload: '/inform_sustainability_level{{"sustainability_level": "high"}}'
+
+  utter_thank_you:
+    - text: "You're welcome!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,56 @@
+{% extends "chatbot/base.html" %}
+
+{% block title %}Privacy notice · EcoTravel Advisor{% endblock %}
+
+{% block body_class %}auth-page-body{% endblock %}
+
+{% block content %}
+
+<section class="auth-page">
+    <div class="auth-card privacy-card">
+
+        <h2>Privacy notice</h2>
+        <p class="auth-subtitle">Version {{ policy_version }}</p>
+
+        {% if deleted %}
+            <div class="auth-note">Your conversations and carbon calculations have been deleted.</div>
+        {% endif %}
+
+        <h3>What we collect</h3>
+        <p>Your username, optional email address and password (stored hashed), the trip details you give the bot
+        (destination, dates, budget, sustainability preference), your chat messages and any carbon calculations you run.</p>
+
+        <h3>Why, and our legal basis</h3>
+        <p>To provide the trip-planning service and keep your plan between sessions. We rely on your consent
+        (GDPR Article 6(1)(a)), given when you create an account or when asked after logging in.</p>
+
+        <h3>How long we keep it</h3>
+        <p>Conversations, their messages and carbon calculations are deleted automatically
+        <strong>{{ retention_days }} days after they were created</strong>. Your account details are kept until you delete your account.</p>
+
+        <h3>Who receives it</h3>
+        <p>Your messages are not sold or shared for advertising. To answer a request, place names and coordinates
+        (not your identity) are sent to OpenStreetMap services (Nominatim, Overpass), Open-Meteo and Frankfurter.</p>
+
+        <h3>Your rights</h3>
+        <p>You can access, correct or erase your data, withdraw consent at any time without affecting earlier processing,
+        and complain to your data-protection authority.
+        {% if contact_email %}Contact: <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>.{% endif %}</p>
+
+        {% if user.is_authenticated %}
+        <h3>Manage your data</h3>
+        <form method="post" action="{% url 'chatbot:delete_conversations' %}" class="auth-form">
+            {% csrf_token %}
+            <button type="submit" class="nav-link nav-link-ghost auth-submit">Delete my conversations now</button>
+        </form>
+        <form method="post" action="{% url 'chatbot:delete_account' %}" class="auth-form"
+              onsubmit="return confirm('Withdraw consent and permanently delete your account and all data?');">
+            {% csrf_token %}
+            <button type="submit" class="nav-link nav-link-ghost auth-submit">Withdraw consent and delete my account</button>
+        </form>
+        {% endif %}
+
+    </div>
+</section>
+
+{% endblock %}

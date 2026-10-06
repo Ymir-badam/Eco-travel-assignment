@@ -1,0 +1,47 @@
+{% extends "chatbot/base.html" %}
+
+{% block title %}Privacy consent · EcoTravel Advisor{% endblock %}
+
+{% block body_class %}auth-page-body{% endblock %}
+
+{% block content %}
+
+<section class="auth-page">
+    <div class="auth-card">
+
+        <div class="auth-icon">🔒</div>
+
+        <h2>Before you continue</h2>
+        <p class="auth-subtitle">Please review how we handle your data.</p>
+
+        {% if error %}
+            <div class="auth-error">You need to tick the box to use the chat. You can decline and log out below.</div>
+        {% endif %}
+
+        <ul class="consent-summary">
+            <li>We store your account, trip details and chat messages to run the service.</li>
+            <li>Conversations and carbon calculations are <strong>deleted automatically after {{ retention_days }} days</strong>.</li>
+            <li>You can delete your conversations or your whole account at any time, and withdraw consent whenever you like.</li>
+        </ul>
+
+        <form method="post" class="auth-form">
+            {% csrf_token %}
+            <div class="consent-row">
+                <input type="checkbox" name="consent" id="id_consent" class="consent-checkbox" required>
+                <label for="id_consent">
+                    I have read the <a href="{% url 'chatbot:privacy' %}" target="_blank" rel="noopener">privacy notice</a>
+                    and agree to this processing.
+                </label>
+            </div>
+            <button type="submit" class="primary-button auth-submit">Agree and continue →</button>
+        </form>
+
+        <form method="post" action="{% url 'chatbot:logout' %}" class="auth-form">
+            {% csrf_token %}
+            <button type="submit" class="nav-link nav-link-ghost auth-submit">Decline and log out</button>
+        </form>
+
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,244 @@
+{% extends "chatbot/base.html" %}
+{% load static %}
+
+{% block title %}Chat · EcoTravel Advisor{% endblock %}
+
+{% block body_class %}dashboard-page{% endblock %}
+
+{% block footer %}{% endblock %}
+
+{% block content %}
+
+<div class="chat-page">
+
+    <aside class="chat-sidebar">
+
+        <div class="sidebar-header">
+            <div class="assistant-avatar">
+                🌿
+            </div>
+
+            <div>
+                <h3>EcoTravel AI</h3>
+                <span>
+                    <span class="status-dot"></span>
+                    Online
+                </span>
+            </div>
+        </div>
+
+        <div class="sidebar-tabs">
+            <button type="button" class="sidebar-tab active" data-tab="actions" onclick="switchSidebarTab('actions')">
+                ⚡ Assistant
+            </button>
+            <button type="button" class="sidebar-tab" data-tab="conversations" onclick="switchSidebarTab('conversations')">
+                💬 Conversations
+            </button>
+        </div>
+
+        <div class="sidebar-panel" data-panel="actions">
+
+            <div class="sidebar-section">
+
+                <h4>Quick actions</h4>
+
+                <button class="quick-action" onclick="sendQuickMessage('Find hotels')">
+                    🏨
+                    <span>Find hotels</span>
+                </button>
+
+                <button class="quick-action" onclick="sendQuickMessage('Check transport')">
+                    🚆
+                    <span>Check transport</span>
+                </button>
+
+                <button class="quick-action" onclick="sendQuickMessage('Show attractions')">
+                    📍
+                    <span>Find attractions</span>
+                </button>
+
+                <button class="quick-action" onclick="sendQuickMessage('What is the weather?')">
+                    🌤️
+                    <span>Check weather</span>
+                </button>
+
+                <button class="quick-action" onclick="sendQuickMessage('Estimate carbon footprint')">
+                    🌱
+                    <span>Carbon footprint</span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="sidebar-panel hidden" data-panel="conversations">
+
+            <div class="sidebar-section conversations-section">
+
+                <form action="{% url 'chatbot:new_conversation' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="new-chat-button">
+                        + New conversation
+                    </button>
+                </form>
+
+                <div class="conversation-list">
+
+                    {% for conv in conversations %}
+
+                        <a href="{% url 'chatbot:chat_detail' conv.id %}"
+                           class="conversation-item {% if conv.id == conversation.id %}active{% endif %}">
+                            <div class="conversation-item-title">{{ conv.title }}</div>
+                            <div class="conversation-item-preview">{{ conv.preview }}</div>
+                            <div class="conversation-item-date">{{ conv.updated_at|date:"M j" }}</div>
+                        </a>
+
+                    {% empty %}
+
+                        <p class="empty-note">No conversations yet — send a message to start one.</p>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="{% url 'chatbot:home' %}" class="back-home">
+                ← Back to home
+            </a>
+        </div>
+
+    </aside>
+
+
+    <section class="chat-container">
+
+        <div class="chat-header">
+
+            <div>
+                <h2>{{ conversation.title|default:"Travel Assistant" }}</h2>
+                <p>Ask me anything about your trip.</p>
+            </div>
+
+            <button class="clear-button" onclick="clearChat()">
+                Clear view
+            </button>
+
+        </div>
+
+
+        <div id="chatMessages" class="chat-messages">
+
+            {% if history %}
+
+                {% for msg in history %}
+
+                    {% if msg.sender == "bot" %}
+                        <div class="message bot-message">
+                            <div class="message-avatar">🌿</div>
+                            <div class="message-content">
+                                <div class="message-name">EcoTravel AI</div>
+                                <div class="message-bubble">
+                                    {{ msg.text|linebreaksbr }}
+                                    {% if msg.links %}
+                                        <div class="message-links">
+                                            {% for link in msg.links %}
+                                                <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                <div class="message-timestamp">{{ msg.day }} · {{ msg.time|time:"H:i" }}</div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="message user-message">
+                            <div class="message-content">
+                                <div class="message-name">You</div>
+                                <div class="message-bubble">{{ msg.text }}</div>
+                                <div class="message-timestamp">{{ msg.day }} · {{ msg.time|time:"H:i" }}</div>
+                            </div>
+                            <div class="message-avatar user-avatar">👤</div>
+                        </div>
+                    {% endif %}
+
+                {% endfor %}
+
+            {% else %}
+
+                <div class="message bot-message">
+
+                    <div class="message-avatar">
+                        🌿
+                    </div>
+
+                    <div class="message-content">
+
+                        <div class="message-name">
+                            EcoTravel AI
+                        </div>
+
+                        <div class="message-bubble">
+                            Hi{% if user.is_authenticated %}, {{ user.username }}{% endif %}! 👋 I'm your EcoTravel Advisor.
+                            <br><br>
+                            I can help you plan a trip, find hotels,
+                            explore attractions, check transport,
+                            understand the weather, and estimate your
+                            carbon footprint.
+                            <br><br>
+                            Where would you like to travel?
+                        </div>
+
+                    </div>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="typing-indicator" id="typingIndicator">
+            <span></span>
+            <span></span>
+            <span></span>
+            <label>EcoTravel AI is thinking...</label>
+        </div>
+
+
+        <form id="chatForm" class="chat-input-area">
+
+            {% csrf_token %}
+
+            <input
+                type="text"
+                id="messageInput"
+                name="message"
+                placeholder="Tell me about your trip..."
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit" class="send-button">
+                <span>Send</span>
+                <span>➤</span>
+            </button>
+
+        </form>
+
+        <div class="input-hint">
+            AI-generated travel information may need verification.
+        </div>
+
+    </section>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'chatbot/js/chat.js' %}"></script>
+{% endblock %}

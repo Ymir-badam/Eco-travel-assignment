@@ -1,0 +1,75 @@
+version: "3.1"
+
+stories:
+  - story: Short city break - balanced sustainability preference
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: start_trip_planning
+      - action: trip_intake_form
+      - active_loop: trip_intake_form
+      - active_loop: null
+      - slot_was_set:
+          - sustainability_level: medium
+      - action: action_trip_intake_submit
+      - intent: ask_hotels
+      - action: action_find_hotels
+      - intent: ask_transport
+      - action: action_find_transport
+      - intent: ask_carbon_footprint
+      - action: action_estimate_carbon
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Eco-tour in a rural area - high sustainability preference
+    steps:
+      - intent: start_trip_planning
+      - action: trip_intake_form
+      - active_loop: trip_intake_form
+      - active_loop: null
+      - slot_was_set:
+          - sustainability_level: high
+      - action: action_trip_intake_submit
+      - intent: ask_transport
+      - action: action_find_transport
+      - intent: ask_attractions
+      - action: action_find_attractions
+      - intent: ask_weather
+      - action: action_weather_forecast
+      - intent: ask_carbon_footprint
+      - action: action_estimate_carbon
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Carbon-neutral business trip - cost-led but still checks emissions
+    steps:
+      - intent: start_trip_planning
+      - action: trip_intake_form
+      - active_loop: trip_intake_form
+      - active_loop: null
+      - slot_was_set:
+          - sustainability_level: low
+      - action: action_trip_intake_submit
+      - intent: ask_carbon_footprint
+      - action: action_estimate_carbon
+      - intent: request_human_handover
+      - action: action_human_handover
+
+  - story: Place lookup mid-conversation
+    steps:
+      - intent: start_trip_planning
+      - action: trip_intake_form
+      - active_loop: trip_intake_form
+      - active_loop: null
+      - action: action_trip_intake_submit
+      - intent: ask_attractions
+      - action: action_find_attractions
+      - intent: ask_place_description
+      - action: action_describe_place
+
+  - story: Direct human handover without planning first
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_human_handover
+      - action: action_human_handover

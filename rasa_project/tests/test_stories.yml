@@ -1,0 +1,24 @@
+version: "3.1"
+
+stories:
+  - story: TEST - user asks for hotels before giving a destination
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_hotels
+      - action: action_find_hotels
+
+  - story: TEST - two consecutive low-confidence messages escalate to a human
+    steps:
+      - intent: nlu_fallback
+      - action: action_default_fallback
+      - intent: nlu_fallback
+      - action: action_default_fallback
+
+  - story: TEST - user abandons the intake form partway through
+    steps:
+      - intent: start_trip_planning
+      - action: trip_intake_form
+      - active_loop: trip_intake_form
+      - intent: request_human_handover
+      - action: action_human_handover

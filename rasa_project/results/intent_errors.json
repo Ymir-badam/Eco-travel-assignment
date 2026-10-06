@@ -1,0 +1,778 @@
+[
+  {
+    "text": "can we start",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "start_trip_planning",
+      "confidence": 0.8961906433105469
+    }
+  },
+  {
+    "text": "hey, I need help planning a trip",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "start_trip_planning",
+      "confidence": 0.9982831478118896
+    }
+  },
+  {
+    "text": "that's it",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6058860421180725
+    }
+  },
+  {
+    "text": "I don't need anything else",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9337394833564758
+    }
+  },
+  {
+    "text": "I agree",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.902528703212738
+    }
+  },
+  {
+    "text": "that's what I meant",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.8276296257972717
+    }
+  },
+  {
+    "text": "proceed",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.26221996545791626
+    }
+  },
+  {
+    "text": "that's incorrect",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.999376118183136
+    }
+  },
+  {
+    "text": "stop",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9847878217697144
+    }
+  },
+  {
+    "text": "I'm thinking about a trip somewhere",
+    "intent": "start_trip_planning",
+    "intent_prediction": {
+      "name": "inform_destination",
+      "confidence": 0.8857473134994507
+    }
+  },
+  {
+    "text": "somewhere near Porto, Portugal",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "ask_hotels",
+      "confidence": 0.9346219897270203
+    }
+  },
+  {
+    "text": "I'm going to Rome",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8824725151062012
+    }
+  },
+  {
+    "text": "I'm considering Helsinki",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "inform_sustainability_level",
+      "confidence": 0.6914932727813721
+    }
+  },
+  {
+    "text": "I'd like somewhere around Lake Como, Italy",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "ask_hotels",
+      "confidence": 0.9856446981430054
+    }
+  },
+  {
+    "text": "February",
+    "intent": "inform_dates",
+    "intent_prediction": {
+      "name": "ask_place_description",
+      "confidence": 0.36569151282310486
+    }
+  },
+  {
+    "text": "I don't mind either way, medium is fine",
+    "intent": "inform_sustainability_level",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.8950731158256531
+    }
+  },
+  {
+    "text": "where could I spend the night",
+    "intent": "ask_hotels",
+    "intent_prediction": {
+      "name": "ask_attractions",
+      "confidence": 0.5631625652313232
+    }
+  },
+  {
+    "text": "is driving necessary",
+    "intent": "ask_transport",
+    "intent_prediction": {
+      "name": "inform_destination",
+      "confidence": 0.2718709111213684
+    }
+  },
+  {
+    "text": "is it going to be hot",
+    "intent": "ask_weather",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.3487342894077301
+    }
+  },
+  {
+    "text": "what's interesting about this landmark",
+    "intent": "ask_place_description",
+    "intent_prediction": {
+      "name": "ask_attractions",
+      "confidence": 0.9987064599990845
+    }
+  },
+  {
+    "text": "what is St Mark's Basilica",
+    "intent": "ask_place_description",
+    "intent_prediction": {
+      "name": "ask_attractions",
+      "confidence": 0.4721583425998688
+    }
+  },
+  {
+    "text": "what is Vatican Museums",
+    "intent": "ask_place_description",
+    "intent_prediction": {
+      "name": "ask_attractions",
+      "confidence": 0.9979578256607056
+    }
+  },
+  {
+    "text": "what is Hallgrimskirkja",
+    "intent": "ask_place_description",
+    "intent_prediction": {
+      "name": "ask_attractions",
+      "confidence": 0.5609143972396851
+    }
+  },
+  {
+    "text": "is anyone there",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.3360264301300049
+    }
+  },
+  {
+    "text": "ready to plan",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "start_trip_planning",
+      "confidence": 0.9933575987815857
+    }
+  },
+  {
+    "text": "good day",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9808768630027771
+    }
+  },
+  {
+    "text": "I'm finished",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.7482268214225769
+    }
+  },
+  {
+    "text": "no more questions",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6242401003837585
+    }
+  },
+  {
+    "text": "absolutely",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.895325779914856
+    }
+  },
+  {
+    "text": "exactly",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.9997755885124207
+    }
+  },
+  {
+    "text": "nah",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9597405195236206
+    }
+  },
+  {
+    "text": "forget it",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.7468799352645874
+    }
+  },
+  {
+    "text": "perfect, thanks",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8555695414543152
+    }
+  },
+  {
+    "text": "Berlin please",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9222347736358643
+    }
+  },
+  {
+    "text": "Madrid",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.41349753737449646
+    }
+  },
+  {
+    "text": "Reykjavik sounds nice",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9863260984420776
+    }
+  },
+  {
+    "text": "I want a trip to Florence",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "start_trip_planning",
+      "confidence": 0.7644547820091248
+    }
+  },
+  {
+    "text": "let's visit Seville",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "ask_attractions",
+      "confidence": 0.8819966316223145
+    }
+  },
+  {
+    "text": "I'm planning to go to Nice",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "start_trip_planning",
+      "confidence": 0.8410893678665161
+    }
+  },
+  {
+    "text": "what transport is easiest for tourists",
+    "intent": "ask_transport",
+    "intent_prediction": {
+      "name": "ask_carbon_footprint",
+      "confidence": 0.46977996826171875
+    }
+  },
+  {
+    "text": "what can I explore there",
+    "intent": "ask_attractions",
+    "intent_prediction": {
+      "name": "ask_transport",
+      "confidence": 0.48613226413726807
+    }
+  },
+  {
+    "text": "tell me about local landmarks",
+    "intent": "ask_attractions",
+    "intent_prediction": {
+      "name": "ask_transport",
+      "confidence": 0.86252760887146
+    }
+  },
+  {
+    "text": "should I bring a raincoat",
+    "intent": "ask_weather",
+    "intent_prediction": {
+      "name": "ask_attractions",
+      "confidence": 0.5415858030319214
+    }
+  },
+  {
+    "text": "definitely",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9524806141853333
+    }
+  },
+  {
+    "text": "go ahead",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5421696305274963
+    }
+  },
+  {
+    "text": "that's fine",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9786287546157837
+    }
+  },
+  {
+    "text": "that's wrong",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9835869669914246
+    }
+  },
+  {
+    "text": "never mind",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "inform_dates",
+      "confidence": 0.6880497932434082
+    }
+  },
+  {
+    "text": "great help",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9970423579216003
+    }
+  },
+  {
+    "text": "I want to travel sustainably",
+    "intent": "start_trip_planning",
+    "intent_prediction": {
+      "name": "inform_sustainability_level",
+      "confidence": 0.9594940543174744
+    }
+  },
+  {
+    "text": "help me decide how to travel",
+    "intent": "start_trip_planning",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.7792001962661743
+    }
+  },
+  {
+    "text": "I'm interested in Dublin",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "ask_attractions",
+      "confidence": 0.5667403340339661
+    }
+  },
+  {
+    "text": "I'm thinking about Salzburg",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "ask_place_description",
+      "confidence": 0.903930127620697
+    }
+  },
+  {
+    "text": "how about Tallinn",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "ask_place_description",
+      "confidence": 0.20276586711406708
+    }
+  },
+  {
+    "text": "I'm interested in the Scottish Highlands",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "ask_attractions",
+      "confidence": 0.6895881295204163
+    }
+  },
+  {
+    "text": "I'd like to travel around Tuscany",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "ask_transport",
+      "confidence": 0.9510225057601929
+    }
+  },
+  {
+    "text": "I want a low-impact trip",
+    "intent": "inform_sustainability_level",
+    "intent_prediction": {
+      "name": "start_trip_planning",
+      "confidence": 0.8520709872245789
+    }
+  },
+  {
+    "text": "what is the greenest way to get around",
+    "intent": "ask_transport",
+    "intent_prediction": {
+      "name": "ask_carbon_footprint",
+      "confidence": 0.9980469942092896
+    }
+  },
+  {
+    "text": "tell me about Anne Frank House",
+    "intent": "ask_place_description",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.1787067949771881
+    }
+  },
+  {
+    "text": "let's get started",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_transport",
+      "confidence": 0.8454047441482544
+    }
+  },
+  {
+    "text": "have a good day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.4896262586116791
+    }
+  },
+  {
+    "text": "see you next time",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "inform_dates",
+      "confidence": 0.9792916178703308
+    }
+  },
+  {
+    "text": "cya",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.804081916809082
+    }
+  },
+  {
+    "text": "that's true",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9870362877845764
+    }
+  },
+  {
+    "text": "sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5500985383987427
+    }
+  },
+  {
+    "text": "go for it",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "inform_destination",
+      "confidence": 0.3761138916015625
+    }
+  },
+  {
+    "text": "continue",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9969660639762878
+    }
+  },
+  {
+    "text": "no thanks",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.7969897985458374
+    }
+  },
+  {
+    "text": "I disagree",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9888521432876587
+    }
+  },
+  {
+    "text": "that's exactly what I needed",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6949802041053772
+    }
+  },
+  {
+    "text": "December would work",
+    "intent": "inform_dates",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.31561633944511414
+    }
+  },
+  {
+    "text": "I care a lot about reducing emissions",
+    "intent": "inform_sustainability_level",
+    "intent_prediction": {
+      "name": "ask_carbon_footprint",
+      "confidence": 0.9799178242683411
+    }
+  },
+  {
+    "text": "I'm looking for a sustainable holiday",
+    "intent": "inform_sustainability_level",
+    "intent_prediction": {
+      "name": "start_trip_planning",
+      "confidence": 0.9947758913040161
+    }
+  },
+  {
+    "text": "I want to minimise my carbon footprint",
+    "intent": "inform_sustainability_level",
+    "intent_prediction": {
+      "name": "ask_carbon_footprint",
+      "confidence": 0.5381066799163818
+    }
+  },
+  {
+    "text": "can you suggest an environmentally friendly place",
+    "intent": "ask_hotels",
+    "intent_prediction": {
+      "name": "start_trip_planning",
+      "confidence": 0.8762125968933105
+    }
+  },
+  {
+    "text": "is cycling a good option",
+    "intent": "ask_transport",
+    "intent_prediction": {
+      "name": "inform_sustainability_level",
+      "confidence": 0.5878517031669617
+    }
+  },
+  {
+    "text": "which transport method is most environmentally friendly",
+    "intent": "ask_carbon_footprint",
+    "intent_prediction": {
+      "name": "ask_transport",
+      "confidence": 0.9525965452194214
+    }
+  },
+  {
+    "text": "how environmentally friendly is this trip",
+    "intent": "ask_carbon_footprint",
+    "intent_prediction": {
+      "name": "start_trip_planning",
+      "confidence": 0.8830947279930115
+    }
+  },
+  {
+    "text": "what is Jeronimos Monastery",
+    "intent": "ask_place_description",
+    "intent_prediction": {
+      "name": "inform_dates",
+      "confidence": 0.7957810163497925
+    }
+  },
+  {
+    "text": "can you explain Atomium",
+    "intent": "ask_place_description",
+    "intent_prediction": {
+      "name": "inform_destination",
+      "confidence": 0.3406820595264435
+    }
+  },
+  {
+    "text": "I'd like some travel help",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "start_trip_planning",
+      "confidence": 0.9939877986907959
+    }
+  },
+  {
+    "text": "please do",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.7093652486801147
+    }
+  },
+  {
+    "text": "that works for me",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6782392859458923
+    }
+  },
+  {
+    "text": "perfect",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.988548755645752
+    }
+  },
+  {
+    "text": "cancel that",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.28900641202926636
+    }
+  },
+  {
+    "text": "you've answered my question",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9390928149223328
+    }
+  },
+  {
+    "text": "I'd like an environmentally friendly trip",
+    "intent": "start_trip_planning",
+    "intent_prediction": {
+      "name": "ask_carbon_footprint",
+      "confidence": 0.6284528374671936
+    }
+  },
+  {
+    "text": "travelling to Vienna",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "ask_carbon_footprint",
+      "confidence": 0.7102305293083191
+    }
+  },
+  {
+    "text": "what about Stockholm",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "ask_place_description",
+      "confidence": 0.9734530448913574
+    }
+  },
+  {
+    "text": "maybe Bruges, Belgium",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "ask_place_description",
+      "confidence": 0.9976429343223572
+    }
+  },
+  {
+    "text": "I want a green travel option",
+    "intent": "inform_sustainability_level",
+    "intent_prediction": {
+      "name": "start_trip_planning",
+      "confidence": 0.8691732287406921
+    }
+  },
+  {
+    "text": "are there trams",
+    "intent": "ask_transport",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.7215379476547241
+    }
+  },
+  {
+    "text": "how can I travel locally",
+    "intent": "ask_transport",
+    "intent_prediction": {
+      "name": "ask_carbon_footprint",
+      "confidence": 0.2258252650499344
+    }
+  },
+  {
+    "text": "are there any museums",
+    "intent": "ask_attractions",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8852548599243164
+    }
+  },
+  {
+    "text": "are there any interesting museums",
+    "intent": "ask_attractions",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5185110569000244
+    }
+  },
+  {
+    "text": "is it likely to snow",
+    "intent": "ask_weather",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.46046268939971924
+    }
+  },
+  {
+    "text": "I don't want to talk to a bot",
+    "intent": "request_human_handover",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9172224402427673
+    }
+  }
+]

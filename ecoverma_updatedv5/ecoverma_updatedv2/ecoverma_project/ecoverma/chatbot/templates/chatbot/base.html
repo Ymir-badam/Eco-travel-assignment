@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}EcoTravel Advisor{% endblock %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'chatbot/css/style.css' %}">
+
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+<div class="app-shell">
+
+    <header class="navbar">
+
+        <a href="{% url 'chatbot:home' %}" class="brand">
+            <div class="brand-icon">🌿</div>
+            <div class="brand-text">
+                <h1>EcoTravel</h1>
+                <span>AI Travel Advisor</span>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="{% url 'chatbot:home' %}#features" class="nav-link">Features</a>
+            <a href="{% url 'chatbot:home' %}#how-it-works" class="nav-link">How it works</a>
+        </nav>
+
+        <div class="nav-right">
+
+            <div class="nav-status">
+                <span class="status-dot"></span>
+                AI Online
+            </div>
+
+            {% if user.is_authenticated %}
+
+                <a href="{% url 'chatbot:chat' %}" class="nav-link">Dashboard</a>
+
+                <div class="nav-user">
+                    <span class="nav-user-avatar">{{ user.username|slice:":1"|upper }}</span>
+                    <span class="nav-username">{{ user.username }}</span>
+                </div>
+
+                <a href="{% url 'chatbot:logout' %}" class="nav-link nav-link-ghost">Log out</a>
+
+            {% else %}
+
+                <a href="{% url 'chatbot:login' %}" class="nav-link">Log in</a>
+                <a href="{% url 'chatbot:signup' %}" class="nav-link nav-link-cta">Get started</a>
+
+            {% endif %}
+
+        </div>
+    </header>
+
+    <main class="app-main">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% block footer %}
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="brand-icon">🌿</span> EcoTravel Advisor
+            </div>
+            <p class="footer-note">Plan lower-impact trips with real map, weather and transport data — no greenwashing, just honest signals.</p>
+            <p class="footer-copy">© {% now "Y" %} EcoTravel Advisor · Built as a student project · <a href="{% url 'chatbot:privacy' %}">Privacy</a></p>
+        </div>
+    </footer>
+    {% endblock %}
+
+</div>
+
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

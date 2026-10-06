@@ -1,0 +1,770 @@
+version: "3.1"
+
+nlu:
+
+  # ============================================================
+  # GREET
+  # ============================================================
+
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey
+      - hey there
+      - hi there
+      - hello there
+      - good morning
+      - good afternoon
+      - good evening
+      - morning
+      - hey, how's it going
+      - hiya
+      - is anyone there
+      - are you there
+      - hello, are you available
+      - hey assistant
+      - hi assistant
+      - hello assistant
+      - hey chatbot
+      - hi chatbot
+      - can you help me
+      - I need some help
+      - I'd like some travel help
+      - can we start
+      - let's get started
+      - I'm ready
+      - ready to plan
+      - hello, I need travel advice
+      - hey, I need help planning a trip
+      - hi, can you help me with travel
+      - good day
+
+
+  # ============================================================
+  # GOODBYE
+  # ============================================================
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you later
+      - see you
+      - talk to you later
+      - that's all thanks
+      - I'm done, thanks
+      - thanks, goodbye
+      - bye for now
+      - catch you later
+      - I'll be going now
+      - that's everything
+      - I have everything I need
+      - we're done
+      - I'm finished
+      - no more questions
+      - that's all
+      - that's it
+      - I think we're finished
+      - I'll leave it there
+      - have a good day
+      - have a nice day
+      - thanks, bye
+      - thank you, goodbye
+      - goodbye for now
+      - see you next time
+      - I'll talk to you later
+      - I'm all set
+      - I'm good now
+      - I don't need anything else
+      - cya
+
+
+  # ============================================================
+  # AFFIRM
+  # ============================================================
+
+  - intent: affirm
+    examples: |
+      - yes
+      - yeah
+      - yep
+      - yup
+      - sure
+      - absolutely
+      - definitely
+      - that's right
+      - correct
+      - that's correct
+      - exactly
+      - that's true
+      - sounds good
+      - sounds great
+      - go ahead
+      - please do
+      - yes please
+      - sure thing
+      - of course
+      - certainly
+      - that's fine
+      - that's okay
+      - okay
+      - ok
+      - alright
+      - all right
+      - I agree
+      - I do
+      - yes, that's what I want
+      - that's what I meant
+      - go for it
+      - proceed
+      - continue
+      - that works for me
+      - perfect
+
+
+  # ============================================================
+  # DENY
+  # ============================================================
+
+  - intent: deny
+    examples: |
+      - no
+      - nope
+      - nah
+      - not really
+      - that's wrong
+      - that's not right
+      - no thanks
+      - definitely not
+      - absolutely not
+      - I don't think so
+      - not this time
+      - I'd rather not
+      - don't do that
+      - that's not what I meant
+      - that's incorrect
+      - I disagree
+      - no, that's wrong
+      - no, not really
+      - no way
+      - not at all
+      - I don't want that
+      - I don't need that
+      - that's not suitable
+      - that won't work
+      - I would prefer not
+      - please don't
+      - don't continue
+      - stop
+      - cancel that
+      - forget it
+      - never mind
+
+
+  # ============================================================
+  # THANK
+  # ============================================================
+
+  - intent: thank
+    examples: |
+      - thanks
+      - thank you
+      - thanks a lot
+      - many thanks
+      - thank you so much
+      - appreciate it
+      - I appreciate it
+      - cheers
+      - thanks for your help
+      - thank you for helping
+      - thanks for the information
+      - that's helpful, thanks
+      - very helpful, thanks
+      - you've been helpful
+      - great, thank you
+      - perfect, thanks
+      - brilliant, thanks
+      - excellent, thank you
+      - thanks for explaining
+      - thank you for explaining
+      - I appreciate your help
+      - thanks for the advice
+      - thank you for the advice
+      - thanks for the recommendation
+      - thank you for the recommendation
+      - that's exactly what I needed
+      - you've answered my question
+      - great help
+      - much appreciated
+      - cheers for that
+
+
+  # ============================================================
+  # START TRIP PLANNING
+  # ============================================================
+
+  - intent: start_trip_planning
+    examples: |
+      - I want to plan a trip
+      - help me plan a trip
+      - I'd like to plan a holiday
+      - can you help me plan some travel
+      - I'm thinking about a trip somewhere
+      - plan a low-carbon trip for me
+      - I need help organising a green getaway
+      - help me organise a vacation
+      - I'd like to organise a holiday
+      - can you plan my trip
+      - I need help planning my vacation
+      - I want to organise a sustainable trip
+      - help me arrange an eco-friendly holiday
+      - I'd like an environmentally friendly trip
+      - I want to travel sustainably
+      - help me create a travel plan
+      - can you build me an itinerary
+      - I need a travel itinerary
+      - I'd like some help planning my journey
+      - can we plan my holiday
+      - help me decide how to travel
+      - I want to arrange a green vacation
+      - I'd like to plan an eco trip
+      - can you help with my holiday plans
+      - I need advice for planning a trip
+      - help me prepare for a vacation
+      - I'd like to start planning my trip
+      - let's plan a trip
+      - let's plan my holiday
+      - I want to start planning
+      - can we start planning my vacation
+      - help me design a sustainable journey
+      - I need a sustainable travel plan
+      - I'd like a low-carbon vacation
+      - help me arrange an environmentally friendly holiday
+      - I want to create a green itinerary
+      - can you help me organise my travel
+      - I need assistance planning my journey
+      - I'd like to begin planning a holiday
+
+
+  # ============================================================
+  # INFORM DESTINATION
+  # ============================================================
+
+  - intent: inform_destination
+    examples: |
+      - I want to go to [Lisbon](destination)
+      - [Berlin](destination) please
+      - somewhere near [Porto, Portugal](destination)
+      - I'm thinking of [the Algarve](destination)
+      - [Madrid](destination)
+      - let's go to [Edinburgh](destination)
+      - how about [Kyoto](destination)
+      - [Reykjavik](destination) sounds nice
+      - travelling to [Vienna](destination)
+      - [Copenhagen](destination) is where I want to go
+      - I want to visit [Paris](destination)
+      - I'm going to [Rome](destination)
+      - let's travel to [Amsterdam](destination)
+      - I'd like to visit [Barcelona](destination)
+      - my destination is [Prague](destination)
+      - I'm interested in [Dublin](destination)
+      - I'd like to travel to [Oslo](destination)
+      - what about [Stockholm](destination)
+      - I'd prefer [Zurich](destination)
+      - I want to see [Munich](destination)
+      - let's make [Brussels](destination) the destination
+      - I'd like to go to [Athens](destination)
+      - I'm considering [Helsinki](destination)
+      - I want a trip to [Florence](destination)
+      - [Venice](destination) would be nice
+      - I'm thinking about [Salzburg](destination)
+      - I'd like to visit [Budapest](destination)
+      - I want to travel to [Ljubljana](destination)
+      - how about [Tallinn](destination)
+      - I'd like to explore [Bergen](destination)
+      - my preferred destination is [Valencia](destination)
+      - let's visit [Seville](destination)
+      - I'm planning to go to [Nice](destination)
+      - I'd like somewhere around [Lake Como, Italy](destination)
+      - I'm interested in [the Scottish Highlands](destination)
+      - I want to visit [the French Alps](destination)
+      - maybe [Bruges, Belgium](destination)
+      - I was thinking about [the Azores](destination)
+      - I'd like to travel around [Tuscany](destination)
+      - [Madeira](destination) is my preferred destination
+
+
+  # ============================================================
+  # INFORM DATES
+  # ============================================================
+
+  - intent: inform_dates
+    examples: |
+      - some time in [June](dates)
+      - [the first week of September](dates)
+      - [15th to 22nd of July](dates)
+      - [next month](dates)
+      - around [Christmas](dates)
+      - [autumn this year](dates)
+      - [3rd of March to 10th of March](dates)
+      - I'm flexible, maybe [late spring](dates)
+      - I want to travel in [July](dates)
+      - sometime in [August](dates)
+      - during [September](dates)
+      - around [Easter](dates)
+      - [next weekend](dates)
+      - [next week](dates)
+      - [the second week of June](dates)
+      - [early July](dates)
+      - [mid August](dates)
+      - [late September](dates)
+      - [the first week of October](dates)
+      - [December](dates) would work
+      - during [winter](dates)
+      - sometime this [summer](dates)
+      - sometime this [spring](dates)
+      - [next summer](dates)
+      - [next winter](dates)
+      - [5th to 12th of May](dates)
+      - [10th to 18th of June](dates)
+      - from [1st July to 8th July](dates)
+      - between [12th and 20th of August](dates)
+      - [15th September](dates)
+      - on [Christmas week](dates)
+      - over [New Year](dates)
+      - during [the Easter holidays](dates)
+      - [late November](dates)
+      - [early December](dates)
+      - [the last week of March](dates)
+      - [mid October](dates)
+      - [February](dates)
+      - [January next year](dates)
+      - I'm flexible with [April](dates)
+
+
+  # ============================================================
+  # INFORM BUDGET
+  # ============================================================
+
+  - intent: inform_budget
+    examples: |
+      - my budget is [500](budget) [GBP](currency)
+      - I have about [1000](budget) [euros](currency) to spend
+      - around [750](budget) [USD](currency)
+      - [300](budget) [pounds](currency) total
+      - I can spend up to [2000](budget) [dollars](currency)
+      - budget is [1500](budget) [EUR](currency)
+      - roughly [900](budget) [GBP](currency)
+      - I can spend [1200](budget) [EUR](currency)
+      - my maximum budget is [800](budget) [GBP](currency)
+      - I don't want to spend more than [600](budget) [EUR](currency)
+      - I have [1000](budget) [USD](currency) available
+      - my budget is around [700](budget) [euros](currency)
+      - I can afford [1500](budget) [dollars](currency)
+      - I have a budget of [2000](budget) [EUR](currency)
+      - I'd like to stay below [900](budget) [GBP](currency)
+      - I want to spend about [500](budget) [USD](currency)
+      - my limit is [1200](budget) [euros](currency)
+      - I can spend a maximum of [1800](budget) [EUR](currency)
+      - around [650](budget) [GBP](currency) should be fine
+      - I have roughly [1100](budget) [USD](currency)
+      - [400](budget) [EUR](currency) is my budget
+      - I can spend up to [2500](budget) [dollars](currency)
+      - keep the trip under [1000](budget) [GBP](currency)
+      - I'd prefer to spend less than [750](budget) [EUR](currency)
+      - my spending limit is [900](budget) [USD](currency)
+      - I can allocate [1300](budget) [euros](currency)
+      - I've got [500](budget) [GBP](currency) for the trip
+      - I don't want to exceed [2000](budget) [EUR](currency)
+      - approximately [850](budget) [USD](currency)
+      - I have [300](budget) [pounds](currency) to spend
+      - my total budget is [1700](budget) [EUR](currency)
+      - I'd like to keep it around [600](budget) [GBP](currency)
+      - [2200](budget) [USD](currency) is my maximum
+      - I have around [950](budget) [euros](currency)
+      - I can afford about [700](budget) [GBP](currency)
+      - I'd like a trip costing around [1400](budget) [EUR](currency)
+      - my travel budget is [1000](budget) [USD](currency)
+      - don't spend more than [500](budget) [GBP](currency)
+
+
+  # ============================================================
+  # INFORM SUSTAINABILITY LEVEL
+  # ============================================================
+
+  - intent: inform_sustainability_level
+    examples: |
+      - sustainability is really important to me
+      - I want the [low](sustainability_level) carbon option
+      - keep it [high](sustainability_level) priority for the environment
+      - I don't mind either way, [medium](sustainability_level) is fine
+      - I'd like a [balanced](sustainability_level) approach
+      - environmental impact matters a lot to me, so [high](sustainability_level)
+      - just the essentials, [low](sustainability_level) priority on eco stuff
+      - I want a [high](sustainability_level) sustainability option
+      - sustainability should be my top priority
+      - choose the most environmentally friendly option
+      - I care a lot about reducing emissions
+      - keep sustainability as a high priority
+      - I want a low-impact trip
+      - environmental impact is very important
+      - choose a [low](sustainability_level) carbon trip
+      - I'd prefer a [high](sustainability_level) eco rating
+      - I'd like a [medium](sustainability_level) sustainability level
+      - a balanced approach is best for me
+      - I'm looking for a sustainable holiday
+      - make sustainability a major factor
+      - I want to minimise my carbon footprint
+      - choose greener transport where possible
+      - I care strongly about the environment
+      - I'd rather prioritise sustainability
+      - use a [high](sustainability_level) environmental priority
+      - give me a [medium](sustainability_level) sustainability option
+      - sustainability can be [low](sustainability_level) priority for me
+      - I want something environmentally responsible
+      - keep the ecological impact low
+      - reduce the environmental impact as much as possible
+      - I want a green travel option
+      - environmental considerations are important
+      - I'd like to balance comfort and sustainability
+      - don't prioritise sustainability too much
+      - sustainability is moderately important
+      - make the trip as eco-friendly as possible
+      - I want the greener choice
+      - minimise emissions if possible
+      - sustainability should have a high priority
+
+
+  # ============================================================
+  # ASK HOTELS
+  # ============================================================
+
+  - intent: ask_hotels
+    examples: |
+      - what hotels are nearby
+      - can you find me somewhere to stay
+      - show me eco-friendly accommodation
+      - where can I stay
+      - any good hotels there
+      - find accommodation options
+      - I need a place to sleep
+      - where should I stay
+      - can you recommend a hotel
+      - are there sustainable hotels
+      - show me green accommodation
+      - I need somewhere to stay
+      - what accommodation is available
+      - find me a place to stay
+      - where are the best eco hotels
+      - can you suggest accommodation
+      - I'd like an environmentally friendly hotel
+      - are there any green hotels
+      - recommend somewhere to stay
+      - do you know any sustainable accommodation
+      - what hotels are available
+      - help me find a hotel
+      - I'd like to book a place to stay
+      - where can tourists stay
+      - what are my accommodation options
+      - can you find an eco-friendly hotel
+      - show me hotels in the area
+      - are there any sustainable hostels
+      - do you have accommodation recommendations
+      - I'd like a green place to stay
+      - what's available for accommodation
+      - where could I spend the night
+      - find me sustainable lodging
+      - can you suggest an environmentally friendly place
+      - what hotels would you recommend
+      - are there hotels near the destination
+      - I need accommodation for my trip
+      - help me choose somewhere to stay
+      - what eco-conscious hotels are available
+      - find somewhere comfortable and sustainable
+
+
+  # ============================================================
+  # ASK TRANSPORT
+  # ============================================================
+
+  - intent: ask_transport
+    examples: |
+      - what public transport is there
+      - can I get around without a car
+      - how's the transport situation
+      - is there a metro or train station nearby
+      - tell me about buses and trains there
+      - do I need to rent a car
+      - how can I get around
+      - what transport options are available
+      - is public transport good there
+      - can I use trains to get around
+      - are there buses available
+      - does the city have a metro
+      - how easy is it to travel around
+      - can I get around by bicycle
+      - are there trams
+      - what's the best way to get around the city
+      - do they have good public transport
+      - can I travel without renting a car
+      - what are the local transport options
+      - are trains convenient
+      - are buses reliable
+      - is there a subway
+      - how do tourists get around
+      - should I rent a car
+      - is driving necessary
+      - can I walk around the destination
+      - what's the public transit like
+      - how accessible is public transport
+      - are there electric buses
+      - is cycling a good option
+      - what kind of trains are available
+      - how can I travel locally
+      - can I use public transport instead of a car
+      - tell me about local buses
+      - tell me about local trains
+      - is there a tram network
+      - can I explore the city without a car
+      - what is the greenest way to get around
+      - what transport is easiest for tourists
+
+
+  # ============================================================
+  # ASK ATTRACTIONS
+  # ============================================================
+
+  - intent: ask_attractions
+    examples: |
+      - what's worth visiting
+      - any cultural attractions nearby
+      - show me museums and historic sites
+      - what should I see while I'm there
+      - any interesting places to visit
+      - tell me about local culture
+      - what attractions are there
+      - what should I visit
+      - what are the main sights
+      - what can I see there
+      - are there any museums
+      - what historical sites should I visit
+      - what are the popular attractions
+      - what places are worth seeing
+      - what should I do during my trip
+      - are there cultural sites nearby
+      - recommend some attractions
+      - what are the must-see places
+      - what landmarks can I visit
+      - are there any interesting museums
+      - what tourist attractions are available
+      - tell me about the sights
+      - what can I explore there
+      - what places should I put on my itinerary
+      - are there historic buildings
+      - what cultural experiences are available
+      - where should I go sightseeing
+      - what are the famous sights
+      - show me interesting places
+      - what should I see in the city
+      - what attractions would you recommend
+      - are there any heritage sites
+      - tell me about local landmarks
+      - what historical attractions are there
+      - what are some things worth seeing
+      - can you suggest sightseeing options
+      - where can I experience the local culture
+      - what places are popular with visitors
+      - give me some sightseeing ideas
+      - what should I add to my travel itinerary
+
+
+  # ============================================================
+  # ASK WEATHER
+  # ============================================================
+
+  - intent: ask_weather
+    examples: |
+      - what's the weather like
+      - will it rain
+      - how's the forecast
+      - what should I pack weather-wise
+      - is it going to be hot
+      - what's the climate like
+      - will I need an umbrella
+      - is it usually sunny there
+      - what's the temperature like
+      - will it be cold
+      - should I bring warm clothes
+      - is there much rainfall
+      - what's the weather forecast for my trip
+      - what kind of weather should I expect
+      - will I need a jacket
+      - is the weather usually warm
+      - how cold does it get
+      - does it rain often
+      - is it sunny in the summer
+      - what temperatures should I expect
+      - what clothes should I pack
+      - should I bring a raincoat
+      - is the weather unpredictable
+      - what's the forecast there
+      - will there be rain during my trip
+      - is it usually windy
+      - how warm is it in July
+      - what is the climate during winter
+      - should I pack for cold weather
+      - is the destination rainy
+      - what weather can I expect
+      - tell me about the climate
+      - is it likely to snow
+      - do I need warm clothing
+      - do I need summer clothes
+      - what's the typical temperature
+      - will it be sunny
+      - how's the climate there
+      - what should I wear because of the weather
+      - give me a weather overview
+
+
+  # ============================================================
+  # ASK CARBON FOOTPRINT
+  # ============================================================
+
+  - intent: ask_carbon_footprint
+    examples: |
+      - what's the carbon footprint of getting there
+      - how much CO2 will this trip produce
+      - compare emissions for different transport options
+      - which way of travelling is greenest
+      - it's about [600](distance_km) km, what's the greenest way to go
+      - the journey is [1200](distance_km) kilometres, what's the carbon cost
+      - how much carbon will my journey produce
+      - calculate the emissions for my trip
+      - what transport option produces the least CO2
+      - which transport method is most environmentally friendly
+      - how much CO2 does travelling produce
+      - can you estimate my travel emissions
+      - compare the carbon emissions of train and car
+      - what is the greenest way to travel
+      - how can I reduce the carbon footprint of my journey
+      - tell me the environmental impact of this trip
+      - calculate my carbon footprint
+      - how much carbon dioxide will I generate
+      - what's the lowest emission transport option
+      - compare transport emissions
+      - how polluting is this journey
+      - how environmentally friendly is this trip
+      - estimate the emissions for [100](distance_km) km
+      - what are the emissions for [200](distance_km) kilometres
+      - I'm travelling [300](distance_km) km, what's the carbon footprint
+      - calculate emissions for a [400](distance_km) km journey
+      - what about a journey of [500](distance_km) km
+      - how much CO2 for [750](distance_km) kilometres
+      - estimate the carbon cost of [1000](distance_km) km
+      - compare emissions for a [150](distance_km) km trip
+      - which is greener for [250](distance_km) km
+      - how much carbon for [800](distance_km) kilometres
+      - what's the greenest option for [900](distance_km) km
+      - can you calculate emissions for [1100](distance_km) kilometres
+      - what transport has the smallest carbon footprint
+      - is the train greener than flying
+      - is a bus better for emissions than a car
+      - how can I travel with fewer emissions
+      - tell me about the carbon impact of travelling
+
+
+  # ============================================================
+  # ASK PLACE DESCRIPTION
+  # ============================================================
+
+  - intent: ask_place_description
+    examples: |
+      - tell me about [Belem Tower](place_name)
+      - what is [Jeronimos Monastery](place_name)
+      - describe [the old town](place_name)
+      - what's the history of [the castle](place_name)
+      - tell me about [Prague Castle](place_name)
+      - what is [Brandenburg Gate](place_name)
+      - describe [Edinburgh Castle](place_name)
+      - what's the history of [Colosseum](place_name)
+      - tell me about this place
+      - can you describe this attraction
+      - what's interesting about this landmark
+      - give me some information about this site
+      - what's the history behind this place
+      - why is this place famous
+      - what can I learn about this attraction
+      - tell me more about the castle
+      - what's special about this monument
+      - can you explain what this place is
+      - tell me about [Tower Bridge](place_name)
+      - what is [Sagrada Familia](place_name)
+      - describe [Acropolis](place_name)
+      - what's the story of [Charles Bridge](place_name)
+      - tell me about [Neuschwanstein Castle](place_name)
+      - what is [St Mark's Basilica](place_name)
+      - describe [Hofburg Palace](place_name)
+      - what's the history of [the Old Town Square](place_name)
+      - can you explain [Atomium](place_name)
+      - tell me about [Anne Frank House](place_name)
+      - what is [Vatican Museums](place_name)
+      - give me information about [the Pantheon](place_name)
+      - what's special about [Bruges Old Town](place_name)
+      - can you describe [Ljubljana Castle](place_name)
+      - tell me the history of [Buda Castle](place_name)
+      - what should I know about [Nymphenburg Palace](place_name)
+      - explain [Rijksmuseum](place_name)
+      - tell me about [Nyhavn](place_name)
+      - what is [Hallgrimskirkja](place_name)
+      - describe [Helsinki Cathedral](place_name)
+      - give me some background on [Schonbrunn Palace](place_name)
+
+
+  # ============================================================
+  # REQUEST HUMAN HANDOVER
+  # ============================================================
+
+  - intent: request_human_handover
+    examples: |
+      - I want to speak to a real person
+      - can I talk to a human advisor
+      - this is too complicated, connect me with someone
+      - I'd like a human to help with this
+      - put me through to an agent
+      - I need personalised advice from a real travel advisor
+      - can I speak with a person
+      - I want a human representative
+      - connect me to a travel advisor
+      - can I talk to an actual person
+      - I'd like to speak with someone
+      - please connect me to an agent
+      - I need human assistance
+      - can a real person help me
+      - transfer me to an advisor
+      - I'd prefer to speak with a human
+      - I want to talk to customer support
+      - can you connect me with support
+      - let me speak to a travel expert
+      - I need personalised travel advice
+      - can someone from your team help me
+      - I'd like human assistance
+      - please put me through to someone
+      - I don't want to talk to a bot
+      - can I speak to a real travel expert
+      - connect me with a person who can help
+      - I need to talk to an advisor
+      - can you transfer me to a human
+      - I'd like to speak with customer service
+      - please get a human involved
+      - I need someone to advise me
+      - can an agent help me with this
+      - I want personal assistance
+      - please connect me with a real advisor
+      - I'd rather speak to someone directly
+      - is there a human I can talk to
+      - can I get help from a travel consultant
+      - I'd like to contact an advisor
+      - please transfer me to support
+      - I want human help
+

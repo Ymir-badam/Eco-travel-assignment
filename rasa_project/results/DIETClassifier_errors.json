@@ -1,0 +1,1249 @@
+[
+  {
+    "text": "yeah",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "dates",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.8604008555412292,
+        "value": "yeah",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "somewhere near Porto, Portugal",
+    "entities": [
+      {
+        "start": 15,
+        "end": 30,
+        "value": "Porto, Portugal",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Copenhagen is where I want to go",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "Copenhagen",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I'm going to Rome",
+    "entities": [
+      {
+        "start": 13,
+        "end": 17,
+        "value": "Rome",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "let's travel to Amsterdam",
+    "entities": [
+      {
+        "start": 16,
+        "end": 25,
+        "value": "Amsterdam",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I'm considering Helsinki",
+    "entities": [
+      {
+        "start": 16,
+        "end": 24,
+        "value": "Helsinki",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "place_name",
+        "start": 16,
+        "end": 24,
+        "confidence_entity": 0.9395808577537537,
+        "value": "Helsinki",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I'd like somewhere around Lake Como, Italy",
+    "entities": [
+      {
+        "start": 26,
+        "end": 42,
+        "value": "Lake Como, Italy",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "the second week of June",
+    "entities": [
+      {
+        "start": 0,
+        "end": 23,
+        "value": "the second week of June",
+        "entity": "dates"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dates",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9581223130226135,
+        "value": "the",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "dates",
+        "start": 11,
+        "end": 23,
+        "confidence_entity": 0.983944833278656,
+        "value": "week of June",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "over New Year",
+    "entities": [
+      {
+        "start": 5,
+        "end": 13,
+        "value": "New Year",
+        "entity": "dates"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dates",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9066126942634583,
+        "value": "over",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "dates",
+        "start": 5,
+        "end": 13,
+        "confidence_entity": 0.6366128325462341,
+        "value": "New Year",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "keep sustainability as a high priority",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "sustainability_level",
+        "start": 25,
+        "end": 29,
+        "confidence_entity": 0.998336911201477,
+        "value": "high",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "a balanced approach is best for me",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "sustainability_level",
+        "start": 2,
+        "end": 10,
+        "confidence_entity": 0.9985333681106567,
+        "value": "balanced",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "give me some information about this site",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "place_name",
+        "start": 36,
+        "end": 40,
+        "confidence_entity": 0.6529352068901062,
+        "value": "site",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what is St Mark's Basilica",
+    "entities": [
+      {
+        "start": 8,
+        "end": 26,
+        "value": "St Mark's Basilica",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what is Vatican Museums",
+    "entities": [
+      {
+        "start": 8,
+        "end": 23,
+        "value": "Vatican Museums",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "can you describe Ljubljana Castle",
+    "entities": [
+      {
+        "start": 17,
+        "end": 33,
+        "value": "Ljubljana Castle",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "destination",
+        "start": 17,
+        "end": 33,
+        "confidence_entity": 0.9767231345176697,
+        "value": "Ljubljana Castle",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what is Hallgrimskirkja",
+    "entities": [
+      {
+        "start": 8,
+        "end": 23,
+        "value": "Hallgrimskirkja",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Berlin please",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "Berlin",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Madrid",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "Madrid",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dates",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.7840350270271301,
+        "value": "Madrid",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Reykjavik sounds nice",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "Reykjavik",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "my destination is Prague",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "Prague",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "place_name",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9852558374404907,
+        "value": "Prague",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I want a trip to Florence",
+    "entities": [
+      {
+        "start": 17,
+        "end": 25,
+        "value": "Florence",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "let's visit Seville",
+    "entities": [
+      {
+        "start": 12,
+        "end": 19,
+        "value": "Seville",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I'm planning to go to Nice",
+    "entities": [
+      {
+        "start": 22,
+        "end": 26,
+        "value": "Nice",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want to visit the French Alps",
+    "entities": [
+      {
+        "start": 16,
+        "end": 31,
+        "value": "the French Alps",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "destination",
+        "start": 16,
+        "end": 19,
+        "confidence_entity": 0.8529310822486877,
+        "value": "the",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "place_name",
+        "start": 27,
+        "end": 31,
+        "confidence_entity": 0.6203659772872925,
+        "value": "Alps",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "around Easter",
+    "entities": [
+      {
+        "start": 7,
+        "end": 13,
+        "value": "Easter",
+        "entity": "dates"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "5th to 12th of May",
+    "entities": [
+      {
+        "start": 0,
+        "end": 18,
+        "value": "5th to 12th of May",
+        "entity": "dates"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dates",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9854913949966431,
+        "value": "5th",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "dates",
+        "start": 7,
+        "end": 18,
+        "confidence_entity": 0.5791946649551392,
+        "value": "12th of May",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "keep it high priority for the environment",
+    "entities": [
+      {
+        "start": 8,
+        "end": 12,
+        "value": "high",
+        "entity": "sustainability_level"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what is Sagrada Familia",
+    "entities": [
+      {
+        "start": 8,
+        "end": 23,
+        "value": "Sagrada Familia",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "let's go to Edinburgh",
+    "entities": [
+      {
+        "start": 12,
+        "end": 21,
+        "value": "Edinburgh",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "place_name",
+        "start": 12,
+        "end": 21,
+        "confidence_entity": 0.9982859492301941,
+        "value": "Edinburgh",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I'm interested in Dublin",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "Dublin",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I'm thinking about Salzburg",
+    "entities": [
+      {
+        "start": 19,
+        "end": 27,
+        "value": "Salzburg",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "place_name",
+        "start": 19,
+        "end": 27,
+        "confidence_entity": 0.9796410799026489,
+        "value": "Salzburg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I want to travel to Ljubljana",
+    "entities": [
+      {
+        "start": 20,
+        "end": 29,
+        "value": "Ljubljana",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "place_name",
+        "start": 20,
+        "end": 29,
+        "confidence_entity": 0.9932321310043335,
+        "value": "Ljubljana",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "how about Tallinn",
+    "entities": [
+      {
+        "start": 10,
+        "end": 17,
+        "value": "Tallinn",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I'm interested in the Scottish Highlands",
+    "entities": [
+      {
+        "start": 18,
+        "end": 40,
+        "value": "the Scottish Highlands",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "destination",
+        "start": 18,
+        "end": 21,
+        "confidence_entity": 0.5982629656791687,
+        "value": "the",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "place_name",
+        "start": 22,
+        "end": 30,
+        "confidence_entity": 0.782004177570343,
+        "value": "Scottish",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "sustainability_level",
+        "start": 31,
+        "end": 40,
+        "confidence_entity": 0.6377940773963928,
+        "value": "Highlands",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I'd like to travel around Tuscany",
+    "entities": [
+      {
+        "start": 26,
+        "end": 33,
+        "value": "Tuscany",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "during winter",
+    "entities": [
+      {
+        "start": 7,
+        "end": 13,
+        "value": "winter",
+        "entity": "dates"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "during the Easter holidays",
+    "entities": [
+      {
+        "start": 7,
+        "end": 26,
+        "value": "the Easter holidays",
+        "entity": "dates"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I'd like a balanced approach",
+    "entities": [
+      {
+        "start": 11,
+        "end": 19,
+        "value": "balanced",
+        "entity": "sustainability_level"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "keep the ecological impact low",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "sustainability_level",
+        "start": 27,
+        "end": 30,
+        "confidence_entity": 0.9909399747848511,
+        "value": "low",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tell me about Belem Tower",
+    "entities": [
+      {
+        "start": 14,
+        "end": 25,
+        "value": "Belem Tower",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "place_name",
+        "start": 20,
+        "end": 25,
+        "confidence_entity": 0.9008832573890686,
+        "value": "Tower",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "describe the old town",
+    "entities": [
+      {
+        "start": 9,
+        "end": 21,
+        "value": "the old town",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "tell me about Prague Castle",
+    "entities": [
+      {
+        "start": 14,
+        "end": 27,
+        "value": "Prague Castle",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "destination",
+        "start": 14,
+        "end": 27,
+        "confidence_entity": 0.9851808547973633,
+        "value": "Prague Castle",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tell me about Anne Frank House",
+    "entities": [
+      {
+        "start": 14,
+        "end": 30,
+        "value": "Anne Frank House",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "give me information about the Pantheon",
+    "entities": [
+      {
+        "start": 26,
+        "end": 38,
+        "value": "the Pantheon",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "how about Kyoto",
+    "entities": [
+      {
+        "start": 10,
+        "end": 15,
+        "value": "Kyoto",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want to visit Paris",
+    "entities": [
+      {
+        "start": 16,
+        "end": 21,
+        "value": "Paris",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Venice would be nice",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "Venice",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Madeira is my preferred destination",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Madeira",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "autumn this year",
+    "entities": [
+      {
+        "start": 0,
+        "end": 16,
+        "value": "autumn this year",
+        "entity": "dates"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dates",
+        "start": 12,
+        "end": 16,
+        "confidence_entity": 0.8320406675338745,
+        "value": "year",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "December would work",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "December",
+        "entity": "dates"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "sometime this summer",
+    "entities": [
+      {
+        "start": 14,
+        "end": 20,
+        "value": "summer",
+        "entity": "dates"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I'm flexible with April",
+    "entities": [
+      {
+        "start": 18,
+        "end": 23,
+        "value": "April",
+        "entity": "dates"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "destination",
+        "start": 18,
+        "end": 23,
+        "confidence_entity": 0.37364667654037476,
+        "value": "April",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I'd like to stay below 900 GBP",
+    "entities": [
+      {
+        "start": 23,
+        "end": 26,
+        "value": "900",
+        "entity": "budget"
+      },
+      {
+        "start": 27,
+        "end": 30,
+        "value": "GBP",
+        "entity": "currency"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sustainability_level",
+        "start": 17,
+        "end": 22,
+        "confidence_entity": 0.920935869216919,
+        "value": "below",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "budget",
+        "start": 23,
+        "end": 26,
+        "confidence_entity": 0.9996719360351562,
+        "value": "900",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "currency",
+        "start": 27,
+        "end": 30,
+        "confidence_entity": 0.998940646648407,
+        "value": "GBP",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what's the lowest emission transport option",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "sustainability_level",
+        "start": 11,
+        "end": 17,
+        "confidence_entity": 0.5377512574195862,
+        "value": "lowest",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what is Jeronimos Monastery",
+    "entities": [
+      {
+        "start": 8,
+        "end": 27,
+        "value": "Jeronimos Monastery",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "describe Edinburgh Castle",
+    "entities": [
+      {
+        "start": 9,
+        "end": 25,
+        "value": "Edinburgh Castle",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "destination",
+        "start": 9,
+        "end": 25,
+        "confidence_entity": 0.6096404790878296,
+        "value": "Edinburgh Castle",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "can you explain Atomium",
+    "entities": [
+      {
+        "start": 16,
+        "end": 23,
+        "value": "Atomium",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "describe Helsinki Cathedral",
+    "entities": [
+      {
+        "start": 9,
+        "end": 27,
+        "value": "Helsinki Cathedral",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "destination",
+        "start": 9,
+        "end": 27,
+        "confidence_entity": 0.5619978904724121,
+        "value": "Helsinki Cathedral",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I want to go to Lisbon",
+    "entities": [
+      {
+        "start": 16,
+        "end": 22,
+        "value": "Lisbon",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I'm thinking of the Algarve",
+    "entities": [
+      {
+        "start": 16,
+        "end": 27,
+        "value": "the Algarve",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "destination",
+        "start": 20,
+        "end": 27,
+        "confidence_entity": 0.9484344720840454,
+        "value": "Algarve",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "travelling to Vienna",
+    "entities": [
+      {
+        "start": 14,
+        "end": 20,
+        "value": "Vienna",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what about Stockholm",
+    "entities": [
+      {
+        "start": 11,
+        "end": 20,
+        "value": "Stockholm",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "let's make Brussels the destination",
+    "entities": [
+      {
+        "start": 11,
+        "end": 19,
+        "value": "Brussels",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I'd like to go to Athens",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "Athens",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "maybe Bruges, Belgium",
+    "entities": [
+      {
+        "start": 6,
+        "end": 21,
+        "value": "Bruges, Belgium",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dates",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.7438117265701294,
+        "value": "maybe",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "place_name",
+        "start": 6,
+        "end": 12,
+        "confidence_entity": 0.9997088313102722,
+        "value": "Bruges",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "place_name",
+        "start": 14,
+        "end": 21,
+        "confidence_entity": 0.23839564621448517,
+        "value": "Belgium",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I was thinking about the Azores",
+    "entities": [
+      {
+        "start": 21,
+        "end": 31,
+        "value": "the Azores",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I'm flexible, maybe late spring",
+    "entities": [
+      {
+        "start": 20,
+        "end": 31,
+        "value": "late spring",
+        "entity": "dates"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dates",
+        "start": 25,
+        "end": 31,
+        "confidence_entity": 0.967252790927887,
+        "value": "spring",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I want to travel in July",
+    "entities": [
+      {
+        "start": 20,
+        "end": 24,
+        "value": "July",
+        "entity": "dates"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "sustainability can be low priority for me",
+    "entities": [
+      {
+        "start": 22,
+        "end": 25,
+        "value": "low",
+        "entity": "sustainability_level"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "sustainability should have a high priority",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "sustainability_level",
+        "start": 29,
+        "end": 33,
+        "confidence_entity": 0.9884315729141235,
+        "value": "high",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what is the climate during winter",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "dates",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.8989201784133911,
+        "value": "winter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what's the history of the castle",
+    "entities": [
+      {
+        "start": 22,
+        "end": 32,
+        "value": "the castle",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "place_name",
+        "start": 26,
+        "end": 32,
+        "confidence_entity": 0.9874118566513062,
+        "value": "castle",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tell me more about the castle",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "place_name",
+        "start": 23,
+        "end": 29,
+        "confidence_entity": 0.9669831395149231,
+        "value": "castle",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what's the history of the Old Town Square",
+    "entities": [
+      {
+        "start": 22,
+        "end": 41,
+        "value": "the Old Town Square",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "place_name",
+        "start": 22,
+        "end": 34,
+        "confidence_entity": 0.8,
+        "value": "the old town",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tell me about Nyhavn",
+    "entities": [
+      {
+        "start": 14,
+        "end": 20,
+        "value": "Nyhavn",
+        "entity": "place_name"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

@@ -1,0 +1,4 @@
+Django>=4.2,<6.2
+rasa==3.6.20
+requests>=2.31
+
